@@ -1,0 +1,49 @@
+@import "@fontsource-variable/ibm-plex-sans";
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #111716;
+  --color-panel: #18211f;
+  --color-line: #2b3935;
+  --color-muted: #9aa8a2;
+  --color-mint: #b9ed76;
+  --color-paper: #f1f3ed;
+  --font-sans: "IBM Plex Sans Variable", sans-serif;
+  --font-display: Georgia, serif;
+}
+
+:root {
+  color-scheme: dark;
+  --bg: #111716;
+  --panel: #18211f;
+  --line: #2b3935;
+  --muted: #9aa8a2;
+  --mint: #b9ed76;
+  --paper: #f1f3ed;
+}
+
+* { box-sizing: border-box; }
+html { min-height: 100%; background: var(--bg); }
+body {
+  margin: 0;
+  background: radial-gradient(ellipse at 77% -20%, #293c34 0, transparent 44%), var(--bg);
+  color: var(--paper);
+  font-family: "IBM Plex Sans Variable", sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+button, input, textarea, select { font: inherit; }
+button { color: inherit; }
+::selection { color: #111716; background: var(--mint); }
+.scrollbar-hidden { scrollbar-width: none; }
+.scrollbar-hidden::-webkit-scrollbar { display: none; }
+.prose-ai p { margin: 0 0 1rem; line-height: 1.75; }
+.prose-ai strong { color: var(--mint); font-weight: 600; }
+.prose-ai ul { margin: 0 0 1rem; padding-left: 1.25rem; }
+.prose-ai li { padding: .2rem 0; line-height: 1.7; }
+.prose-ai a { color: var(--mint); text-decoration: underline; text-underline-offset: 3px; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .fade-in { animation: fade-in .45s ease-out both; }
+  @keyframes fade-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+}
